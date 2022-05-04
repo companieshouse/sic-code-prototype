@@ -9,9 +9,8 @@
 
 
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
       {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 
@@ -29,25 +28,11 @@
         Find your standard industrial classification (SIC) code
       </h1>
 
-
-
-      <p>
-      This code provides Companies House with a description of your company's nature of business.
-      <br><br>
-      Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
-      <br><br>
-    Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
-
-
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
-
-
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-
-
-      {% from "govuk/components/details/macro.njk" import govukDetails %}
-
+<p>This code provides Companies House with a description of your company's nature of business.
+  <br><br>
+  Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
+  <br><br>
+  Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
 
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -88,14 +73,14 @@
 }) }}
 
 {% set guidance %}
-  <p>Search suggestions:
+<p>Search suggestions:
     <ul>
       <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
       <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
       <li>Check that the keywords are spelt correctly.</li>
       <li>Try different keywords or variations.</li>
     </ul>
-    For more information, read the <a href="/guidance">Guidance for SIC codes</a>.</p>
+For more information, read the <a href="/guidance">Guidance for SIC codes</a>.</p>
   {% endset %}
   {{ govukDetails({
         summaryText: "Tips for searching",
@@ -104,7 +89,7 @@
 
 
 <form action="/error2">
-<button class="govuk-button" action=“/error2” data-module="govuk-button">Search</button>
+  <button class="govuk-button" action=“/error2” data-module="govuk-button">Search</button>
 </form>
 
 
