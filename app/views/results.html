@@ -1,0 +1,163 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Find your standard industrial classification (SIC) code
+    </h1>
+    <p>
+    This code provides Companies House with a description of your company's nature of business.
+    <br><br>
+    Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
+    <br><br>
+Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
+
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+  text: "Enter keyword(s) to search for your code",
+  classes: "govuk-label--l",
+  isPageHeading: true
+},
+classes: "govuk-!-width-one-half",
+hint: {
+  text: "Enter your business activity, for example, 'motor' or 'plumbing'"
+},
+id: "keyword",
+name: "keyword",
+spellcheck: false
+}) }}
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+idPrefix: "waste",
+name: "waste",
+fieldset: {
+  legend: {
+    text: " "
+  }
+},
+items: [
+  {
+    value: "match-phrase",
+    text: "Match exact phrase"
+
+  }
+]
+}) }}
+
+{% set guidance %}
+  <p>Search suggestions:
+    <ul>
+      <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
+      <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
+      <li>Check that the keywords are spelt correctly.</li>
+      <li>Try different keywords or variations.</li>
+    </ul>
+    For more information, read the <a href="/guidance">Guidance for SIC codes</a>.</p>
+  {% endset %}
+  {{ govukDetails({
+        summaryText: "Tips for searching",
+        html: guidance
+        }) }}
+
+<form action="/results3">
+<button class="govuk-button" action=“/results3” data-module="govuk-button">Search</button>
+</form>
+</div>
+</div>
+
+<div class="govuk-grid-row" style="padding-left:15px">
+
+
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+
+
+
+{{ govukTable({
+  caption: "There are XX results for 'flower'",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Code",
+
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Description",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Business activity",
+      classes: 'app-custom-class'
+    },
+    {
+      text: " ",
+      classes: 'app-custom-class'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "46220"
+      },
+      {
+        text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flowers (wholesale)"
+      },
+      {
+        text: "Copy code",
+        classes: "govuk-link"
+      }
+    ],
+    [
+      {
+        text: "46220"
+      },
+      {
+        text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "Copy code",
+        classes: "govuk-link"
+      }
+    ],
+    [
+      {
+        text: "46220"
+      },
+      {
+        text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower and plants exporter (wholesale)"
+      },
+      {
+        text: "Copy code",
+        classes: "govuk-link"
+      }
+    ]
+  ]
+}) }}
+</div>
+
+
+{% endblock %}
