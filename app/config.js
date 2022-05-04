@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'SIC code search',
+  serviceName: 'Service name goes here',
 
   // Default port that prototype runs on
   port: '3000',
@@ -25,7 +25,7 @@ module.exports = {
   // Force HTTP to redirect to HTTPS on production
   useHttps: 'true',
 
-  // Enable or disable Browser Sync
+  // Enable or disable Browser Sync (local development only)
   useBrowserSync: 'true'
 
 }
