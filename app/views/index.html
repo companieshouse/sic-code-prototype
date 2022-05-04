@@ -10,35 +10,33 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Prototype your service using GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        Find your standard industrial classification (SIC) code
+      </h1>
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Here is a list of links to each page:
+        </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+<h2 class="govuk-heading-m">Home page</h2>
+<p><a class="govuk-link" href="/home">Home</a><br></p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+<h2 class="govuk-heading-m">Errors</h2>
+<p><a class="govuk-link" href="/error1">Error 1 - No words entered</a><br></p>
+<p><a class="govuk-link" href="/error2">Error 2 - Spelling error</a><br></p>
+<p><a class="govuk-link" href="/error3">Error 2B - Option 2 for Spelling error</a><br></p>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+<h2 class="govuk-heading-m">Results</h2>
+<p><a class="govuk-link" href="/results1">Results - Option 1</a><br></p>
+<p><a class="govuk-link" href="/results2">Results - Option 2 (WIP)</a><br></p>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+<h2 class="govuk-heading-m">Guidance</h2>
+<p><a class="govuk-link" href="/guidance">Guidance</a><br></p>
+<br>
 
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+<form action="/home">
+<button class="govuk-button" action=“/home” data-module="govuk-button">Start at home page</button>
+</form>
+</div>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+
 
 {% endblock %}
