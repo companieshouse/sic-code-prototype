@@ -31,10 +31,6 @@
       <br><br>
   Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
 
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-
-
-      {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -76,6 +72,8 @@ Check the spelling of your keyword(s)
     }
   ]
 }) }}
+
+      {% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% set guidance %}
   <p>Search suggestions:
