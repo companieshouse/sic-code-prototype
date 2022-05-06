@@ -54,14 +54,14 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
   ]
 }) }}
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Search"
-}) }}
-
+<form action="/results4">
+<button class="govuk-button" action=“/results3” data-module="govuk-button">Search</button>
+</form>
 </div>
 </div>
+
+<p class="govuk-body govuk-!-font-size-24"><b>There are XX results for 'flower'</b></p>
 
 <div class="govuk-grid-row" style="padding-left:15px">
 
