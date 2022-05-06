@@ -63,21 +63,7 @@
   Finding the correct SIC code
   </h2>
 
-  {% set guidance %}
-    <p>Search suggestions:
-      <ul>
-        <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
-        <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
-        <li>Check that the keywords are spelt correctly.</li>
-        <li>Try different keywords or variations.</li>
-      </ul>
-      For more information,
-      <a href="https://www.gov.uk/guidance/people-with-significant-control-pscs">read the guidance about SIC codes</a>.</p>
-    {% endset %}
-    {{ govukDetails({
-          summaryText: "Tips for searching",
-          html: guidance
-          }) }}
+
 
   {% set codesearch %}
 
@@ -97,14 +83,14 @@
         </ul>
         <p><b>If you own a business:</b></p>
           <ul class="govuk-body">
-            <li>The business activity relates to the goods sold, produced or the services you provide to your customers.
-              For example, if you have a plumbing business, but employ plumbers and staff that do administration,
-              the service your business provides is ‘plumbing’ and the activity of the business is ‘plumbing’.</li>
+            <li>The business activity relates to the goods sold or produced or the services you provide to your customers.
+              For example, if you run a gardening business, but also have staff that do administration, the service your
+              business provides is ‘gardening’ and the activity of the business is ‘gardening’.</li>
             </ul>
             <p><b>If you are a shareholder employee:</b></p>
               <ul class="govuk-body">
-                <li>The business the activity relates to the goods sold or produced or the services provided by the business that employs you.
-                  For example, if you are providing accounting services as a shareholder employee of a cheese manufacturing business, your activity is ‘cheese manufacturing’.</li>
+                <li>The business activity relates to the goods sold or produced or the services provided by the business that employs you.
+                  For example, if you are providing accounting services as a shareholder employee of a textile manufacturing business, your activity is ‘textile manufacturing’.</li>
                 </ul>
 
   {% endset %}
@@ -122,15 +108,6 @@
     {
       heading: {
         text: "I cannot find a matching code, what do I do?"
-      },
-      content: {
-        html: "<p class='govuk-body'>Find the SIC code(s) that best reflect your business activity, it does not have to be an exact match.
-          <br><br>There are several generic codes that can be used if a more specific code is not listed, for example, 'other business activities' or 'other service activities'.</p>"
-      }
-    },
-    {
-      heading: {
-        text: "What if I am self employed, run a business or a shareholder employee?"
       },
       content: {
         html: "<p class='govuk-body'>Find the SIC code(s) that best reflect your business activity, it does not have to be an exact match.
