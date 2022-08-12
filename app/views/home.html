@@ -9,9 +9,12 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-xl">
         Find a Standard Industrial Classification (SIC) code
       </h1>
+
+
       <p class="govuk-body govuk-!-margin-bottom-4">
         This code provides Companies House with a description of your company's nature of business.
       </p>
@@ -23,7 +26,6 @@
        </p>
 
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   label: {
@@ -40,14 +42,13 @@
   spellcheck: false
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
 
 {{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
+  idPrefix: "matchPhrase",
+  name: "matchPhrase",
   fieldset: {
     legend: {
-      text: " "
     }
   },
   items: [
@@ -58,6 +59,7 @@
     }
   ]
 }) }}
+
 
 {% set guidance %}
   <p>To search for a SIC code you should:
