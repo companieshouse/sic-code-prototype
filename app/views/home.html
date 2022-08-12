@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Find your standard industrial classification (SIC) code - GOV.UK
+  Find a Standard Industrial Classification (SIC) code - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -10,27 +10,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Find your standard industrial classification (SIC) code
+        Find a Standard Industrial Classification (SIC) code
       </h1>
-      <p>
-      This code provides Companies House with a description of your company's nature of business.
-      <br><br>
-      Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
-      <br><br>
-  Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        This code provides Companies House with a description of your company's nature of business.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-8">
+        <a class="govuk-link" href="/guidance">Read the Guidance for SIC Codes</a>.
+       </p>
 
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
   label: {
-    text: "Enter keyword(s) to search for your code",
+    text: "Search for a SIC code",
     classes: "govuk-label--l",
-    isPageHeading: true
+    isPageHeading: false
   },
   classes: "govuk-!-width-one-half",
   hint: {
-    text: "Enter your business activity, for example, 'motor' or 'plumbing'"
+    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'."
   },
   id: "keyword",
   name: "keyword",
@@ -57,7 +60,7 @@
 }) }}
 
 {% set guidance %}
-  <p>Search suggestions:
+  <p>To search for a SIC code you should:
     <ul>
       <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
       <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
@@ -68,7 +71,7 @@
     <a href="/guidance">Guidance for SIC codes</a>.</p>
   {% endset %}
   {{ govukDetails({
-        summaryText: "Tips for searching",
+        summaryText: "Help with searching for a SIC code",
         html: guidance
         }) }}
 
