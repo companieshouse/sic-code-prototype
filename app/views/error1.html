@@ -2,7 +2,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-    Find a Standard Industrial Classification (SIC) code - GOV.UK
+  {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -21,9 +25,9 @@
         ]
       }) }}
 
-      <h1 class="govuk-heading-xl">
-        Find a Standard Industrial Classification (SIC) code
-      </h1>
+    <h1 class="govuk-heading-xl">
+      Find a Standard Industrial Classification (SIC) code
+    </h1>
 
       <p class="govuk-body govuk-!-margin-bottom-4">
         This code provides Companies House with a description of your company's nature of business.
