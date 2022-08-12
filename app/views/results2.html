@@ -1,9 +1,16 @@
 
 {% extends "layout.html" %}
 
+
 {% block pageTitle %}
-    Find your standard industrial classification (SIC) code - GOV.UK
+  {{ serviceName }} – GOV.UK
 {% endblock %}
+
+
+{% block beforeContent %}
+{% include "includes/back-link.html" %}
+{% endblock %}
+
 
 {% block content %}
 
