@@ -7,11 +7,20 @@
 
 {% block content %}
 
+<a class="govuk-back-link" href="javascript:window.history.back()">Search again</a>
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
+
+    <h1 class="govuk-heading-xl govuk-!-margin-top-4">
       Find your standard industrial classification (SIC) code
     </h1>
+
+
+
+<!---
+
     <p>
     This code provides Companies House with a description of your company's nature of business.
     <br><br>
@@ -59,6 +68,7 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
 {{ govukButton({
   text: "Search"
 }) }}
+-->
 
 </div>
 </div>
@@ -67,12 +77,90 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
 
 <div class="govuk-grid-row" style="padding-left:15px">
 
+
+
+  {% from "govuk/components/table/macro.njk" import govukTable %}
+
+  {{ govukTable({
+    caption: "Dates and amounts",
+    captionClasses: "govuk-table__caption--m",
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: "Business activity"
+      },
+      {
+        text: "Details"
+      },
+      {
+        text: "SIC code"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Wholesale of flowers and plants"
+        },
+        {
+          html: '<p class="govuk-body-m">This includes:</p>
+                <ul class="govuk-body-m" class="govuk-list govuk-list--bullet">
+                  <li><b>Flowers (wholesale)</b></li>
+                  <li><b>Flower salesman (wholesale)</b></li>
+                  <li><b>Flower and plants exporter (wholesale)</b></li>
+
+                </ul>
+
+
+
+<span class="govuk-accordion__section-toggle" data-nosnippet="">
+  <span class="govuk-accordion__section-toggle-focus">
+  <span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span><span class="govuk-accordion__section-toggle-text">See more details<span class="govuk-visually-hidden"> this section</span></span></span></span>
+
+
+
+
+                '
+        },
+        {
+          text: "x"
+        }
+      ],
+      [
+        {
+          text: "Next 33 weeks"
+        },
+        {
+          text: "£109.80 per week"
+        },
+        {
+          text: "£dd"
+        }
+      ],
+      [
+        {
+          text: "Total estimated pay"
+        },
+        {
+          text: "£4,282.20"
+        },
+        {
+          text: "£dd"
+        }
+      ]
+    ]
+  }) }}
+
+
+
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
-    <p class="govuk-heading-s">Code and description</p>
+    <p class="govuk-heading-s">Business activity</p>
   </div>
     <div class="govuk-grid-column-one-half">
-      <p class="govuk-heading-s">Business activity</p> </div> </div>
+      <p class="govuk-heading-s">Details</p> </div>
+    </div>
 
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
