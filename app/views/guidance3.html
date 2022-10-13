@@ -1,0 +1,215 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Find your standard industrial classification (SIC) code - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "https://www.gov.uk/"
+    },
+    {
+      text: "Find a Standard industrial classification (SIC) code",
+      href: "#"
+    },
+    {
+      text: "Guidance for Standard industrial classification (SIC) codes",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="javascript:void(0)">
+                Search the Register of Overseas Entities
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                Guidance
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+          </div>
+
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Guidance for Standard industrial classification (SIC) codes
+      </h1>
+      <p>
+        Companies House uses a condensed version of the full list of codes available from the Office of National Statistics.
+        <br>  <br>
+        Use our search tool to <a class="govuk-link" href="/home">Find your standard industrial classification (SIC) code</a>.</p>
+
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+<h2 class=govuk-heading-l>
+  About SIC codes
+  </h2>
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "What is a Standard industrial classification (SIC) code?"
+      },
+      content: {
+        html: "<p class='govuk-body'>SIC stands for standard industrial classification, they are the codes by which we identify the company’s nature of business.
+          Each code has five digits.
+    </p>"
+      }
+    },
+    {
+      heading: {
+        text: "What is the purpose of a SIC code?"
+      },
+      content: {
+        html: "<p class='govuk-body'>The code is a way of classifying a business or self-employed person by their business activity.
+        Activity means the service or product you provide to others.</p>"
+      }
+    },
+    {
+      heading: {
+        text: "Why does Companies House need my code?"
+      },
+      content: {
+        html: "<p class='govuk-body'>It provides a way of structuring information.
+          We supply these codes to the Office for National Statistics who use the data to create and analyse industry statistics.</p>"
+      }
+    }
+  ]
+}) }}
+
+<br>
+<br>
+<h2 class=govuk-heading-l>
+  Finding the correct SIC code
+  </h2>
+
+
+
+  {% set codesearch %}
+
+<p> Use our search tool to <a href=/home>Find your standard industrial classification (SIC) code</a><br>
+<p class="govuk-body">Select a SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.</p>
+<p><b>To help you find the correct code, try these search suggestions:</b></p>
+    <ul class="govuk-body">
+      <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
+      <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
+      <li>Check that the keywords are spelt correctly.</li>
+      <li>Try different keywords or variations.</li>
+    </ul>
+    <p><b>If you are self-employed:</b></p>
+      <ul class="govuk-body">
+        <li>The business activity relates to what you do to earn an income, not what the business you may work for does.
+          For example, if you are a graphic designer who works for a large technology business, your activity is ‘graphic design’.</li>
+        </ul>
+        <p><b>If you own a business:</b></p>
+          <ul class="govuk-body">
+            <li>The business activity relates to the goods sold or produced or the services you provide to your customers.
+              For example, if you run a gardening business, but also have staff that do administration, the service your
+              business provides is ‘gardening’ and the activity of the business is ‘gardening’.</li>
+            </ul>
+            <p><b>If you are a shareholder employee:</b></p>
+              <ul class="govuk-body">
+                <li>The business activity relates to the goods sold or produced or the services provided by the business that employs you.
+                  For example, if you are providing accounting services as a shareholder employee of a textile manufacturing business, your activity is ‘textile manufacturing’.</li>
+                </ul>
+
+  {% endset %}
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "How do I find the correct SIC code?"
+      },
+      content: {
+        html: codesearch
+      }
+    },
+    {
+      heading: {
+        text: "I cannot find a matching code, what do I do?"
+      },
+      content: {
+        html: "<p class='govuk-body'>Find the SIC code(s) that best reflect your business activity, it does not have to be an exact match.
+          <br><br>There are several generic codes that can be used if a more specific code is not listed, for example, 'other business activities' or 'other service activities'.</p>"
+      }
+    },
+      {
+      heading: {
+        text: "What if I am involved in more than one activity?"
+      },
+      content: {
+        html: "<p class='govuk-body'>You can add up to four SIC codes to your company information.<br><br>
+          If you have more than four activities, choose the SIC codes that relate to the predominant activities of your business.</p>"
+      }
+    },
+      {
+        heading: {
+          text: "What if my company is dormant or non-trading?"
+        },
+        content: {
+          html: "<p class='govuk-body'>Even if your company is dormant (99999) or non-trading (74990) you'll still need to provide the appropriate SIC code.</p>"
+        }
+      },
+        {
+          heading: {
+            text: "What if I change my business activity during the tax year?"
+          },
+          content: {
+            html: "<p class='govuk-body'>If you changed activity during the tax year, choose the SIC code that relates to the activity you or the business were involved in at year end (5 April).</p>"
+          }
+        },
+          {
+            heading: {
+              text: "What happens if I do not supply a SIC code?"
+            },
+            content: {
+              html: "<p class='govuk-body'>It is not possbile to complete a company filing without a SIC code.
+                Please read through the guidance on this page to help you find a code that best reflects your business.</p>"
+          }
+        }
+  ]
+}) }}
+
+<p>If you cannot find the answer you need, please contact our <a class="govuk-link" href="#">support team</a>.</p>
+</div>
+</div>
+
+
+
+{% endblock %}
