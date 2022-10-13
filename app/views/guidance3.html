@@ -27,9 +27,8 @@
 {% endblock %}
 
 {% block content %}
-
+<!--
   <div class="govuk-grid-row">
-
     <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
@@ -56,9 +55,8 @@
           </ul>
         </nav>
       </aside>
-          </div>
-
-
+          </div>-->
+        
 
 
 
@@ -77,6 +75,22 @@
 <h2 class=govuk-heading-l>
   About SIC codes
   </h2>
+
+      <p class="govuk-body-s govuk-!-margin-bottom-2">Contents</p>
+      <ul class="govuk-list govuk-list govuk-!-margin-bottom-8">
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="govuk-link govuk-body-s govuk-link--no-underline" href="#agentreg">You are a UK-regulated agent and you are registering for the overseas entity </a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="govuk-link govuk-body-s govuk-link--no-underline" href="#agentoereg">You are a UK-regulated agent and the overseas entity is registering</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="govuk-link govuk-body-s govuk-link--no-underline" href="#oeagentreg">You are the overseas entity and a UK-regulated agent is registering for you</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+          <a class="govuk-link govuk-body-s govuk-link--no-underline" href="#oereg">You are the overseas entity and you or someone on behalf of you is registering for you</a>
+        </li>
+
 
 {{ govukAccordion({
   id: "accordion-default",
