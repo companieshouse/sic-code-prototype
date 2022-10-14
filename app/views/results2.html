@@ -18,10 +18,9 @@
   <div class="govuk-grid-column-full" style="padding-left:15px">
 
 
-    <h1 class="govuk-heading-xl">
-      Find your standard industrial classification (SIC) code
+    <h1 class="govuk-heading-l">
+      There are XX results for 'flower'
     </h1>
-
 
 
 
@@ -31,8 +30,6 @@
 
 
 {{ govukTable({
-  caption: "There are XX results for 'flower'",
-  captionClasses: "govuk-table__caption--m",
   firstCellIsHeader: false,
   head: [
     {
@@ -74,7 +71,13 @@
     ]
   ]
 }) }}
+
 </div>
+
+{{ govukButton({
+  text: "Search again",
+  href: '/home'
+}) }}
 
 
 {% endblock %}

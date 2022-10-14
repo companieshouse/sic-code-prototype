@@ -13,76 +13,23 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl govuk-!-margin-top-4">
-      Find your standard industrial classification (SIC) code
+    <h1 class="govuk-heading-l govuk-!-margin-top-4">
+      There are XX results for 'flower'
     </h1>
 
-
-
-<!---
-
-    <p>
-    This code provides Companies House with a description of your company's nature of business.
-    <br><br>
-    Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.
-    <br><br>
-Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><br>
-
-
-{{ govukInput({
-  label: {
-    text: "Enter keyword(s) to search for your code",
-    classes: "govuk-label--l",
-    isPageHeading: true
-  },
-  classes: "govuk-!-width-one-half",
-  hint: {
-    text: "Enter your business activity, for example, 'motor' or 'plumbing'"
-  },
-  id: "account-number",
-  name: "account-number",
-  spellcheck: false
-}) }}
-
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  idPrefix: "waste",
-  name: "waste",
-  fieldset: {
-    legend: {
-      text: " "
-    }
-  },
-  items: [
-    {
-      value: "match-phrase",
-      text: "Match exact phrase"
-
-    }
-  ]
-}) }}
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Search"
-}) }}
+</div>
+</div>
+<!--      <h1 class="govuk-heading-xl govuk-!-margin-top-4">
+      Find your standard industrial classification (SIC) code
+    </h1>  
+   <p class="govuk-body-m" id="42220"><b>46220</b>
+  <br><a class="govuk-link" href="javascript:void(0)" onclick="CopyToClipboard('42220');return false;">Copy code</a></p>
 -->
-
-</div>
-</div>
-
 
 <div class="govuk-grid-row" style="padding-left:15px">
 
 
-
-  {% from "govuk/components/table/macro.njk" import govukTable %}
-
   {{ govukTable({
-    caption: "There are XX results for 'flower'",
-    captionClasses: "govuk-table__caption--m",
     firstCellIsHeader: true,
     head: [
       {
@@ -109,9 +56,6 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
                 </ul>
 
 
-
-
-    
 <span class="govuk-accordion__section-toggle" data-nosnippet="">
   <span class="govuk-accordion__section-toggle-focus">
   <span class="govuk-accordion-nav__chevron govuk-accordion-nav__chevron--down"></span><span class="govuk-accordion__section-toggle-text">See more details<span class="govuk-visually-hidden"> this section</span></span></span></span>
@@ -131,12 +75,7 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
                 <li>Seeds (retail)</li>
             </ul>
           </div>
-        </details>
-
-
-
-
-                '
+        </details>'
         },
         {
           html: '<p class="govuk-body-m" id="42220"><b>46220</b></p>
@@ -145,7 +84,7 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
       ],
       [
         {
-          text: "Next 33 weeks"
+          text: "Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores"
         },
         {
           text: "£109.80 per week"
@@ -184,29 +123,6 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
-    <p class="govuk-heading-m">Wholesale of flowers and plants
-      <p class="govuk-body-m" id="42220"><b>46220</b>
-    <br><a class="govuk-link" href="javascript:void(0)" onclick="CopyToClipboard('42220');return false;">Copy code</a></p>
-
-
-
-
-
-  </div>
-    <div class="govuk-grid-column-one-half">
-      <p class="govuk-body-s">This includes:</p>
-      <ul class="govuk-body-s" class="govuk-list govuk-list--bullet">
-        <li>Bulbs (wholesale)</li>
-        <li><b>Flowers (wholesale)</b></li>
-        <li><b>Flower salesman (wholesale)</b></li>
-        <li><b>Flower and plants exporter (wholesale)</b></li>
-        <li>Plants (wholesale)</li>
-        <li>Flowers (wholesale)</li>
-        <li>Tulip bulbs (wholesale)</li>
-      </ul>
-</div></div>
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
@@ -241,17 +157,22 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
             </ul>
           </div>
         </details>
+
+        
   </div></div>
+
+
+
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
+      <div class="govuk-grid-column-one-third">
         <p class="govuk-heading-m">Growing of other non-perennial crops<p class="govuk-body-m"><b>01190</b>
         <br><a class="govuk-link-s" href="#">Copy code</a></p>
       </div>
-        <div class="govuk-grid-column-one-half">
+        <div class="govuk-grid-column-one-third">
           <p class="govuk-body-s">This includes:</p>
           <ul class="govuk-body-s" class="govuk-list govuk-list--bullet">
             <li>Alfalfa growing</li>
@@ -356,5 +277,11 @@ Read the <a class="govuk-link" href="/guidance">Guidance for SIC Codes</a>.</p><
 
 </div>
 {% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukButton({
+  text: "Search again",
+  href: '/home'
+}) }}
+
 
 {% endblock %}
