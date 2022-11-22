@@ -15,6 +15,84 @@
 {% block content %}
 
 <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find a Standard Industrial Classification (SIC) code
+      </h1>
+
+
+<form action="/error1" method="get">
+
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        This code gives Companies House a description of your company’s nature of business.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        You should use the SIC code that is the closest match to your business activity when you register your company. You can use up to 4 codes.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-8">
+        See the <a class="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/527619/SIC07_CH_condensed_list_en.csv/preview" href="/guidance">full list of SIC codes</a> or
+          <a class="govuk-link" href="/guidance">read the Guidance for SIC Codes</a>.
+       </p>
+
+
+
+{{ govukInput({
+  label: {
+    text: "Search for a SIC code",
+    classes: "govuk-label--l",
+    isPageHeading: false
+  },
+  classes: "govuk-!-width-one-half",
+  hint: {
+    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'. You can also search using the code."
+  },
+  id: "keyword",
+  name: "keyword",
+  spellcheck: false
+}) }}
+
+
+
+{{ govukCheckboxes({
+  idPrefix: "matchPhrase",
+  name: "matchPhrase",
+  fieldset: {
+    legend: {
+    }
+  },
+  items: [
+    {
+      value: "match-phrase",
+      text: "Match exact phrase"
+
+    }
+  ]
+}) }}
+
+
+{% set guidance %}
+  <p>To search for a SIC code you should:
+    <ul>
+      <li>enter as much detail as you can - for example, ‘retail of clothes’ instead of ‘retail’</li>
+      <li>describe what you do if you’re self-employed - for example, ‘farming' instead of ‘farmer’</li>
+      <li>check the spelling is correct</li>
+    </ul>
+</p>
+  {% endset %}
+  {{ govukDetails({
+        summaryText: "Help with searching for a SIC code",
+        html: guidance
+        }) }}
+
+
+<button class="govuk-button" action=“/error1” data-module="govuk-button">Search</button>
+</form>
+</div>
+
+
+
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
 <form action="/home" method="get">
