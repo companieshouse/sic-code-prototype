@@ -1,0 +1,237 @@
+
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Search again",
+  href: "/home",
+  classes: "govuk-!-margin-bottom-5"
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full" style="padding-left:15px">
+
+
+    <h1 class="govuk-heading-l">
+      There are XX results for 'flower'
+    </h1>
+
+<p>Sort by relevance</p>
+
+<div class="govuk-grid-row" style="padding-left:15px">
+
+
+
+
+{{ govukTable({
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Business activity",
+      classes: 'govuk-!-width-one-half'
+    },
+    {
+      text: "Details",
+      classes: 'govuk-!-width-two-thirds'
+    },
+    {
+      text: "SIC code",
+      classes: 'govuk-!-width-one-quarter'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Retail sale of flowers"
+      },
+      {
+        text: "Flowers (retail)"
+      },
+      {
+        text: "47760",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+        text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flowers (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "	Flower and plants exporter (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+
+
+
+    
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ],
+    [
+      {
+       text: "Wholesale of flowers and plants"
+      },
+      {
+        text: "Flower salesman (wholesale)"
+      },
+      {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      }
+    ]
+  ]
+}) }}
+
+</div>
+
+{{ govukButton({
+  text: "Search again",
+  href: '/home'
+}) }}
+
+
+{% endblock %}
