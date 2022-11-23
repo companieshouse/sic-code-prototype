@@ -17,7 +17,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<form action="/results4" method="get">
+<form action="/results" method="get">
 
 
       {{ govukErrorSummary({
@@ -91,14 +91,13 @@
 
 
 {% set guidance %}
-<p>To search for a SIC code you should:
+  <p>To search for a SIC code you should:
     <ul>
-      <li>Describe the goods or services the business produces or sells, for example ‘clothing retailing’ not ‘retailing’.</li>
-      <li>If you are self-employed, describe what you do, for example ‘dairy farming’ not ‘dairy farmer’.</li>
-      <li>Check that the keywords are spelt correctly.</li>
-      <li>Try different keywords or variations.</li>
+      <li>enter as much detail as you can - for example, ‘retail of clothing’ instead of ‘retail’</li>
+      <li>describe what you do if you’re self-employed - for example, ‘farming' instead of ‘farmer’</li>
+      <li>check the spelling is correct</li>
     </ul>
-For more information, read the <a href="/guidance">Guidance for SIC codes</a>.</p>
+</p>
   {% endset %}
   {{ govukDetails({
         summaryText: "Help with searching for a SIC code",
@@ -107,7 +106,7 @@ For more information, read the <a href="/guidance">Guidance for SIC codes</a>.</
 
 
 
-  <button class="govuk-button" action=“/results4” data-module="govuk-button">Search</button>
+  <button class="govuk-button" action=“/results” data-module="govuk-button">Search</button>
 </form>
 
 
