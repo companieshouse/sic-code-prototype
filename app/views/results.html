@@ -7,23 +7,90 @@
 {% endblock %}
 
 
-{% block beforeContent %}
-{{ govukBackLink({
-  text: "Search again",
-  href: "/home",
-  classes: "govuk-!-margin-bottom-5"
-}) }}
-{% endblock %}
-
-
-
 {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Find a Standard Industrial Classification (SIC) code
+      </h1>
+
+
+<form action="/error1" method="get">
+
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        This code gives Companies House a description of your company’s nature of business.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        You should use the SIC code that is the closest match to your business activity when you register your company. You can use up to 4 codes.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-8">
+        See the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/527619/SIC07_CH_condensed_list_en.csv/preview">full list of SIC codes</a> or
+          <a class="govuk-link" href="/guidance">read the Guidance for SIC Codes</a>.
+       </p>
+
+
+
+{{ govukInput({
+  label: {
+    text: "Search for a SIC code",
+    classes: "govuk-label--m",
+    isPageHeading: false
+  },
+  classes: "govuk-!-width-one-half",
+  hint: {
+    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'. You can also search using the code."
+  },
+  id: "keyword",
+  name: "keyword",
+  spellcheck: false
+}) }}
+
+
+
+{{ govukCheckboxes({
+  idPrefix: "matchPhrase",
+  name: "matchPhrase",
+  fieldset: {
+    legend: {
+    }
+  },
+  items: [
+    {
+      value: "match-phrase",
+      text: "Match exact phrase"
+
+    }
+  ]
+}) }}
+
+
+{% set guidance %}
+  <p>To search for a SIC code you should:
+    <ul>
+      <li>enter as much detail as you can - for example, ‘retail of clothing’ instead of ‘retail’</li>
+      <li>describe what you do if you’re self-employed - for example, ‘farming' instead of ‘farmer’</li>
+      <li>check the spelling is correct</li>
+    </ul>
+</p>
+  {% endset %}
+  {{ govukDetails({
+        summaryText: "Help with searching for a SIC code",
+        html: guidance
+        }) }}
+
+
+<button class="govuk-button" action=“/error1” data-module="govuk-button">Search</button>
+</form>
+</div>
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full" style="padding-left:15px">
 
 
-    <h1 class="govuk-heading-l">
+    <h1 class="govuk-heading-m">
       There are XX results for 'flower'
     </h1>
 
@@ -38,200 +105,176 @@
   firstCellIsHeader: false,
   head: [
     {
-      text: "Business activity",
-      classes: 'govuk-!-width-one-half'
+      text: "SIC code",
+      classes: 'govuk-!-width-one-fifth'
     },
     {
       text: "Details",
-      classes: 'govuk-!-width-two-thirds'
+      classes: 'govuk-!-width-one-half'
     },
     {
-      text: "SIC code",
-      classes: 'govuk-!-width-one-quarter'
+      text: "Business activity",
+      classes: 'govuk-!-width-one-half'
     }
   ],
   rows: [
     [
+    {
+        text: "47760",
+        classes: 'govuk-!-font-weight-bold'
+      },
       {
         text: "Retail sale of flowers"
       },
       {
         text: "Flowers (retail)"
-      },
-      {
-        text: "47760",
-        classes: 'govuk-!-font-weight-bold'
       }
     ],
-    [
+    [      
+    {
+        text: "46220",
+        classes: 'govuk-!-font-weight-bold'
+      },
       {
         text: "Wholesale of flowers and plants"
       },
       {
         text: "Flowers (wholesale)"
-      },
-      {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
       }
+
     ],
     [
       {
-       text: "Wholesale of flowers and plants"
+       text: "46220",
+      classes: 'govuk-!-font-weight-bold'
       },
       {
         text: "Flower salesman (wholesale)"
       },
       {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
+        text: "Wholesale of flowers and plants"
       }
     ],
     [
       {
-       text: "Wholesale of flowers and plants"
+       text: "46220",
+        classes: 'govuk-!-font-weight-bold'
       },
       {
         text: "	Flower and plants exporter (wholesale)"
       },
       {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
+        text: "Wholesale of flowers and plants"
       }
     ],
-
-
-
     
     [
       {
-       text: "Wholesale of flowers and plants"
+       text: "46220",
+        classes: 'govuk-!-font-weight-bold'
       },
       {
         text: "Flower and plants importer (wholesale)"
       },
       {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
+      },
+      {
+        text: "Flower and plants importer (wholesale)"
+      },
+      {
+        text: "Wholesale of flowers and plants"
       }
     ],
+    
     [
       {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
+       text: "46220",
         classes: 'govuk-!-font-weight-bold'
-      }
-    ],
-    [
-      {
-       text: "Wholesale of flowers and plants"
       },
       {
-        text: "Flower salesman (wholesale)"
+        text: "Flower and plants importer (wholesale)"
       },
       {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
-      }
-    ],
-    [
-      {
-       text: "Wholesale of flowers and plants"
-      },
-      {
-        text: "Flower salesman (wholesale)"
-      },
-      {
-        text: "46220",
-        classes: 'govuk-!-font-weight-bold'
+        text: "Wholesale of flowers and plants"
       }
     ]
   ]
 }) }}
 
 </div>
-
-{{ govukButton({
-  text: "Search again",
-  href: '/home'
-}) }}
 
 
 {% endblock %}
