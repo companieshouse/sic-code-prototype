@@ -19,7 +19,6 @@
 
 <form action="/results4" method="get">
 
-
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
@@ -34,19 +33,15 @@
       Find a Standard Industrial Classification (SIC) code
     </h1>
 
-
-<form action="/results" method="get">
-
       <p class="govuk-body govuk-!-margin-bottom-4">
         This code gives Companies House a description of your company’s nature of business.
       </p>
       <p class="govuk-body govuk-!-margin-bottom-4">
-        You should use the SIC code that is the closest match to your business activity when you register your company. You can use up to 4 codes.
-      </p>
+Find the SIC code(s) that is the closest match to your business activity, it does not have to be an exact match.      </p>
       <p class="govuk-body govuk-!-margin-bottom-8">
-        See the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/527619/SIC07_CH_condensed_list_en.csv/preview">full list of SIC codes</a> or
-          <a class="govuk-link" href="/guidance">read the Guidance for SIC Codes</a>.
+        <a class="govuk-link" href="/guidance">Read the Guidance for SIC Codes</a>.
        </p>
+
 
 
 
@@ -54,16 +49,15 @@
 {{ govukInput({
   label: {
     text: "Search for a SIC code",
-    classes: "govuk-label--m",
+    classes: "govuk-label--l",
     isPageHeading: false
-  },
-  classes: "govuk-!-width-one-half",
-  hint: {
-    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'. You can also search using the code."
   },
   id: "keyword",
   name: "keyword",
-  spellcheck: false,
+  classes: "govuk-!-width-one-half",
+  hint: {
+    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'."
+  },
   errorMessage: {
     text: "Enter keywords that describe your business activity"
   }
