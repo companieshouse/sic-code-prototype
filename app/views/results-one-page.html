@@ -6,9 +6,6 @@
   {{ serviceName }} – GOV.UK
 {% endblock %}
 
-{% block beforeContent %}
-{% include "includes/back-link.html" %}
-{% endblock %}
 
 {% block content %}
 
@@ -22,6 +19,18 @@
 
 <form action="/error1" method="get">
 
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        This code gives Companies House a description of your company’s nature of business.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-4">
+        You should use the SIC code that is the closest match to your business activity when you register your company. You can use up to 4 codes.
+      </p>
+      <p class="govuk-body govuk-!-margin-bottom-8">
+        See the <a class="govuk-link" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/527619/SIC07_CH_condensed_list_en.csv/preview">full list of SIC codes</a> or
+          <a class="govuk-link" href="/guidance">read the Guidance for SIC Codes</a>.
+       </p>
+
+
 
 <!-- Content - edit this in 'includes/search-snippet'-->
 {% include "includes/search-snippet.html" %}
@@ -29,7 +38,6 @@
 
 <!-- Content - edit this in 'includes/details-help'-->
 {% include "includes/details-help.html" %}
-
 
 
 <button class="govuk-button" action=“/error1” data-module="govuk-button">Search</button>
