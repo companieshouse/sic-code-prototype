@@ -31,39 +31,9 @@
       <p class="govuk-body govuk-!-margin-bottom-8">You can enter keywords to search for a SIC code or enter a SIC code to see what business activity it describes. </p>
 
 
-{{ govukInput({
-  label: {
-    text: "Search for a SIC code",
-    classes: "govuk-label--m",
-    isPageHeading: false
-  },
-  classes: "govuk-!-width-one-half",
-  hint: {
-    html: "Enter keywords that describe your business activity. For example, 'plumbing' or 'hairdressing'. "
-  },
-  id: "keyword",
-  name: "keyword",
-  spellcheck: false
-}) }}
 
-
-
-{{ govukCheckboxes({
-  idPrefix: "matchPhrase",
-  name: "matchPhrase",
-  fieldset: {
-    legend: {
-    }
-  },
-  items: [
-    {
-      value: "match-phrase",
-      text: "Match exact phrase"
-
-    }
-  ]
-}) }}
-
+<!-- Kate - edit this in 'includes/search-snippet'-->
+{% include "includes/search-snippet.html" %}
 
 
 {% set guidance %}

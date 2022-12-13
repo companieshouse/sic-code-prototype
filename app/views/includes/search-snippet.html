@@ -1,0 +1,41 @@
+{% call govukFieldset({
+  legend: {
+    text: "Search for an SIC code",
+    classes: "govuk-fieldset__legend--l",
+    isPageHeading: true
+  }
+}) %}
+{{ govukInput({
+  label: {
+    text: "Search for a SIC code",
+    classes: "govuk-visually-hidden",
+    isPageHeading: false
+  },
+  classes: "govuk-!-width-one-half",
+  hint: {
+    html: "Enter keywords that describe your business activity.<br> For example, 'plumbing' or 'hairdressing'. You can also search using the code."
+  },
+  id: "keyword",
+  name: "keyword",
+  spellcheck: false
+}) }}
+
+{{ govukCheckboxes({
+  idPrefix: "matchPhrase",
+  name: "matchPhrase",
+  fieldset: {
+    legend: {
+      text: "Match exact phrase",
+      isPageHeading: true,
+      classes: "govuk-visually-hidden"
+    }
+  },
+  items: [
+    {
+      value: "match-phrase",
+      text: "Match exact phrase"
+
+    }
+  ]
+}) }}
+{% endcall %}
