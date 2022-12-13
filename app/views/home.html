@@ -31,23 +31,13 @@
 
 
 
-<!-- Kate - edit this in 'includes/search-snippet'-->
+<!-- Content - edit this in 'includes/search-snippet'-->
 {% include "includes/search-snippet.html" %}
 
 
-{% set guidance %}
-  <p>To search for a SIC code, you should:
-    <ul>
-      <li>enter as much detail as you can - for example, ‘retail of clothing’ instead of ‘retail’</li>
-      <li>describe what you do if you’re self-employed - for example, ‘farming' instead of ‘farmer’</li>
-      <li>check the spelling is correct</li>
-    </ul>
-</p>
-  {% endset %}
-  {{ govukDetails({
-        summaryText: "Help with searching for a SIC code",
-        html: guidance
-        }) }}
+<!-- Content - edit this in 'includes/details-help'-->
+{% include "includes/details-help.html" %}
+
 
 
 <button class="govuk-button" action=“/results” data-module="govuk-button">Search</button>
